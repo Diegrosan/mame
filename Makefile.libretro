@@ -99,7 +99,7 @@ PLATFLAGS =
 # android only needs a valid ANDROID_NDK_HOME set no paths are needed toolchain and makefile takes care of that
 # make CONFIG=libretero OSD=retro android-xxx is all thes required
 
-else ifeq ($(platform), rpi3_64)
+ifeq ($(platform), rpi3_64)
 	TARGET = $(TARGET_NAME)_libretro.so
 	fpic = -fPIC
 	CFLAGS += $(fpic)
