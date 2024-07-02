@@ -104,7 +104,7 @@ ifeq ($(platform), rpi3_64)
 	fpic = -fPIC
 	CFLAGS += $(fpic)
 	LDFLAGS += $(fpic) -shared -Wl,--version-script=link.T
-	PLATCFLAGS += -mcpu=cortex-a53 -mtune=cortex-a53
+	PLATCFLAGS += -mtune=cortex-a73.cortex-a53 -march=armv8-a+crc+crypto+fp+simd
 	PLATCFLAGS += -fomit-frame-pointer -ffast-math
 	CXXFLAGS = $(CFLAGS) -fno-rtti -fno-exceptions
 	CPU_ARCH := arm64
